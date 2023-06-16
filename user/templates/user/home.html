@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Home Page</title>
+    <link rel="stylesheet" href="{% static 'user/css/home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+          <div>
+            <a href="{% url 'home' %}">Home</a>
+          </div>
+           <div>
+            <a href="{% url 'patient' %}">Patient Registration</a>
+            <a href="{% url 'doctor' %}">Doctor Registration</a>
+            <a href="{% url 'alldoctor' %}">Doctors Details</a>
+            <a href="{% url 'allpatient' %}">Patient Details</a>
+           </div>
+        </nav>
+    </header>
+   <section id="backimg">
+    <img src="{% static 'user/img/healthcare.jpg' %}" alt="">
+   </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: tan;
+    font-family: sans-serif;
+    padding: 2rem;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+table{
+    border: 1px solid red;
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid ;
+    text-align: center;
+}
+th{
+    padding: .7rem;
+    background-color: cadetblue;
+}
+img{
+    height: 100px;
+    /* width: 100px; */
+}
+h4{
+    text-align: end;
+    padding-block: .4rem;
+}
+

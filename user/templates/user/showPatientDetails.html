@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Patient Details</title>
+    <link rel="stylesheet" href="{% static 'user/css/showDetails.css'%}">
+</head>
+<body>
+    <h1>All Patient Details</h1>
+    <h4><a href="{% url 'patient' %}">Register New Patient</a></h4>
+    <table>
+        <tr>
+            <th>SR.NO.</th>
+            <th>UserName</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>ProfilePicture</th>
+        </tr>
+
+       {% for patient in allpatient %}
+       <tr>
+        <th>{{ forloop.counter }}</th>
+        <td>{{patient.UserName}}</td>
+        <td>{{patient.FirstName}}</td>
+        <td>{{patient.LastName}}</td>
+        <td>{{patient.Email}}</td>
+        <td>{{patient.Address}}</td>
+        <td><img src="{{patient.ProfilePicture.url}}" alt=""></td>
+       </tr>
+       {%  endfor %}
+    </table>
+</body>
+</html>

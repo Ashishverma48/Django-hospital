@@ -1,0 +1,29 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+
+}
+/* header{
+    padding: 1rem;
+} */
+nav{
+    background-image: linear-gradient(to right,rgb(105, 203, 241),rgba(0, 0, 0, 0.654));
+    display: flex;
+    width: 100%;
+    padding: 1.4rem;
+    justify-content: space-around;
+}
+nav a{
+margin-left: 2rem;
+color: rgb(22, 2, 2);
+}
+
+#backimg {
+    width: 100%;
+}
+#backimg img{
+    width: 100%;
+    height: 100vh;
+}

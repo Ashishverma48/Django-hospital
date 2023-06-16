@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Ragistration Form</title>
+    <link rel="stylesheet" href="{% static 'user/css/style.css' %}">
+</head>
+<body>
+   <form action="" method="post" enctype="multipart/form-data">
+    <h1>Doctor Ragistration Form</h1>
+    <h3><a href="{% url 'home' %}">Home</a></h3>
+    {%csrf_token %}
+    <table>
+        {{forms}}
+       
+    </table>
+    <Button>Register</Button>
+   </form>
+   <p id="error">{{error}}</p>
+</body>
+</html>
