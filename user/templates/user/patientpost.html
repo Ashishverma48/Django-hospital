@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Patient's Posts</h1>
+    <ul>
+      {% for category in categories %}
+      <li>
+        <h3>{{category.name}}</h3>
+        <ul>
+          {% for post in posts %}
+          {% if post.category == category %}
+          <li>
+            <h2>{{ post.title }}</h2>
+            <img src="{{ post.image.url }}" alt="Post Image">
+            <p>{{ post.summary|truncatewords:15 }}</p>
+          </li>
+          {% endif %}
+          {% empty %}
+          <li>No Post Avalibale. </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+</body>
+</html>

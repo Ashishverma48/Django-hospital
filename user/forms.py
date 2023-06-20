@@ -27,3 +27,9 @@ class DoctorForm(forms.ModelForm):
         super().__init__(*args,**kwargs)
         for doctor in self.fields.values():
             doctor.widget.attrs['placeholder']=f'Enter {doctor.label} *'
+
+
+class BlogPostForm(forms.ModelForm):
+    class Meta:
+        model=BlogPost
+        fields='__all__'
